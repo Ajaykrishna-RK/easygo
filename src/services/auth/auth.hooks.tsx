@@ -1,10 +1,7 @@
 import { useState } from "react";
 import { signupApi, loginApi, verifyOtpApi, resendOtpApi, socialLoginApi } from "./auth.api";
-import type { SignupPayload, LoginPayload, SocialLoginPayload } from "./auth.api";
+import type { LoginPayload, SignupPayload, SocialLoginPayload } from "../../types/AuthTypes";
 
-/* =======================
-   SIGNUP HOOK
-======================= */
 
 export const useSignup = () => {
   const [loading, setLoading] = useState(false);
@@ -27,9 +24,6 @@ export const useSignup = () => {
   return { signup, loading, error };
 };
 
-/* =======================
-   LOGIN HOOK
-======================= */
 
 export const useLogin = () => {
   const [loading, setLoading] = useState(false);
@@ -74,9 +68,7 @@ export const useSocialLogin = () => {
 };
 
 
-/* =======================
-   OTP HOOKS
-======================= */
+
 
 export const useVerifyOtp = () => {
   const [loading, setLoading] = useState(false);

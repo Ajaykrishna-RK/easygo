@@ -11,7 +11,7 @@ interface AuthButtonProps {
 const AuthButton = ({
   text,
   icon,
-  iconPosition = "left",
+
   onClick,
   loading = false,
   disabled = false,
